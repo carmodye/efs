@@ -12,7 +12,7 @@ Parameters:
     Default: subnet-9f640bfe
   EFSpath:
     Type: String
-    Default: /mnt/public
+    Default: /mnt/efs
   AccessPointARN:
     Type: String
     Description: arn:aws:elasticfilesystem:us-east-1:400788333644:access-point/fsap-0dab2d418b52cd087
