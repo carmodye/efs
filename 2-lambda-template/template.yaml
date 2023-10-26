@@ -5,17 +5,17 @@ Description: Sample SAM Template for lambda-vpc
 Parameters:
   SecurityGroupIds:
     Type: CommaDelimitedList
-    Default: sg-fa7133bc
+    Default: sg-d07fc1bf
   SubnetIDs:
     Type: CommaDelimitedList
     Description: The list of SubnetIDs in your Virtual Private Cloud (VPC)
-    Default: subnet-80c98eae,subnet-04878f4e,subnet-e19ce486,subnet-bfc9fbb0,subnet-0bc28757,subnet-96c847a8
+    Default: subnet-9f640bfe
   EFSpath:
     Type: String
-    Default: /mnt/efs
+    Default: /mnt/public
   AccessPointARN:
     Type: String
-    Description: Access point ARN
+    Description: arn:aws:elasticfilesystem:us-east-1:400788333644:access-point/fsap-0dab2d418b52cd087
 
 Resources:
   HelloWorldFunction:
@@ -24,7 +24,7 @@ Resources:
       CodeUri: hello-world/
       Timeout: 3
       Handler: app.lambdaHandler
-      Runtime: nodejs12.x
+      Runtime: nodejs16.x
       Events:
         HelloWorld:
           Type: Api 
